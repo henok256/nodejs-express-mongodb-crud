@@ -87,7 +87,7 @@ Tutorial.findByIdUpdate(id, req.body, {useFindAndModify:false})
 
 //Delete all tutorial from the database
 
-exports.delete = (res, req)=>{
+exports.delete = (req, res)=>{
     const id = req.params.id;
     Tutorial.findByIdAndRemove(id)
     .then(data=>{
